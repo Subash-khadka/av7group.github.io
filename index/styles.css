@@ -1,0 +1,441 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5; /* Light gray background for the body */
+}
+/*
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c2c2c;
+    padding: 1rem;
+    border-bottom: 2px solid #444;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.navbar a {
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 1rem;
+    background: linear-gradient(145deg, #444, #555);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.4);
+    float: left;
+}
+
+.navbar a.active {
+    background: linear-gradient(145deg, #f94d6a, #ff6b6b);
+    color: white;
+}
+
+.navbar a:hover {
+    background: linear-gradient(145deg, #555, #666);
+}
+
+/* Enhanced and Enlarged Login Button Styles */
+#login-btn {
+    position: absolute;
+    top: 95px; /* Further moved down */
+    right: 20px;
+    background: linear-gradient(145deg, #ff6b6b, #f94d6a);
+    color: white;
+    padding: 0.8rem 1.6rem; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 30px; /* Slightly larger border-radius for a smoother look */
+    font-size: 1.2rem; /* Increased font size */
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(249, 77, 106, 0.6);
+    transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#login-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 1.5;
+}
+
+#login-btn:hover {
+    background: linear-gradient(145deg, #f94d6a, #ff6b6b);
+    transform: scale(1.1) rotate(-3deg); /* Added slight rotation for a dynamic effect */
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(249, 77, 106, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+#login-btn:active {
+    transform: scale(1.05) rotate(0deg); /* Subtle effect when clicked */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(249, 77, 106, 0.7);
+}
+
+
+
+/* Ensure content below the navbar is not hidden behind it */
+body {
+    padding-top: 4rem; /* Adjust the value if needed to match the height of the navbar */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Super-cool-picture-backgrounds.jpg') no-repeat center center;
+    background-size: cover; /* Cover the entire section */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.hero-section .btn {
+    margin-top: 1rem;
+    background-color: #004080; /* Darker blue */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-section .btn:hover {
+    background-color: #002860; /* Even darker blue on hover */
+}
+
+/* Button Styles */
+.btn,
+.team-member button,
+.contact-section .btn,
+.cv-button {
+    display: block; /* Ensure buttons take up full width for better layout */
+    background: linear-gradient(145deg, #007bff, #004080); /* Gradient background */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    text-decoration: none;
+    border-radius: 8px; /* Softer, rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Increased font size */
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin: 1rem auto; /* Center horizontally with automatic margins */
+}
+
+.btn:hover,
+.team-member button:hover,
+.contact-section .btn:hover,
+.cv-button:hover {
+    background: linear-gradient(145deg, #0056b3, #002860); /* Darker gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn:active,
+.team-member button:active,
+.contact-section .btn:active,
+.cv-button:active {
+    background: linear-gradient(145deg, #003f7f, #001f40); /* Even darker gradient when active */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.15); /* Lower shadow */
+    transform: translateY(1px); /* Button presses slightly */
+}
+
+/* Special Styles for Buttons with Icons */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+}
+
+/* About, Team, Projects, Contact Section Styles */
+.about-section,
+.team-section,
+.projects-section,
+.contact-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Team Section Styles */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer corners */
+    padding: 1.5rem; /* Increased padding */
+    width: 250px; /* Increased width */
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    border-radius: 50%;
+}
+
+.team-member button {
+    margin-top: 1rem;
+    background-color: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.team-member button:hover {
+    background-color: #002860;
+}
+
+/* Projects Section Styles */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer corners */
+    padding: 1.5rem; /* Increased padding */
+    width: 250px; /* Increased width */
+    text-align: center;
+}
+
+.project-item img {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    border-radius: 50%;
+}
+
+/* Contact Section Styles */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    text-align: left;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.75rem; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-section .btn {
+    background-color: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section .btn:hover {
+    background-color: #002860;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333333; /* Dark background */
+    color: #ffffff; /* White text color */
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid #444; /* Border for separation */
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: #ffffff;
+}
+
+.social-icons a:hover {
+    color: #cccccc;
+}
+/*/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background */
+    margin: 5% auto; /* Adjusted margin for better centering */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px; /* Added rounded corners */
+    width: 80%;
+    max-width: 600px; /* Added max-width for larger screens */
+    position: relative;
+}
+
+.modal-body {
+    margin-bottom: 60px; /* Increased space for button */
+}
+
+.cv-button {
+    display: block; /* Use block to center with margin */
+    margin: 20px auto; /* Center horizontally with automatic margins */
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #004080, #002860); /* Gradient background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative; /* Use relative positioning for transformations */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    border: 2px solid transparent; /* Initial border */
+}
+
+.cv-button:hover {
+    background: linear-gradient(135deg, #002860, #004080); /* Reverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    border-color: #fff; /* Outline color on hover */
+}
+
+.cv-button:active {
+    background: linear-gradient(135deg, #002860, #004080); /* Maintain hover effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    transform: scale(0.98); /* Slight scale down effect */
+}
+
+/* Close Button Styles */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Ensured cursor indicates a clickable element */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}*/
+
+/*tabs*/
+/* Heading Styles */
+h1 {
+    font-family: 'Lora', serif; /* Apply Lora font */
+    font-size: 3rem;
+    font-weight: 700;
+    color: whitesmoke;
+}
+h2 {
+    font-family: 'Lora', serif; /* Apply Lora font */
+    font-size: 2.75rem; /* Slightly larger for impact */
+    font-weight: 700; /* Bold for emphasis */
+    color: #2c2c2c; /* Slightly lighter color */
+    line-height: 1.2; /* Tighter line height for compactness */
+    letter-spacing: -0.5px; /* Slightly reduced spacing for a polished look */
+}
+
+h3 {
+    font-family: 'Bulletto Killa', cursive; /* Use Bulletto Killa for headings */
+    font-size: 2.25rem; /* Larger size for better hierarchy */
+    font-weight: 700; /* Bold for strong emphasis */
+    color: #333;
+    line-height: 1.3; /* Balanced line height */
+    letter-spacing: 0.5px; /* Increased spacing for readability */
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font */
+    font-size: 1.75rem; /* Slightly larger for better differentiation */
+    font-weight: 600; /* Semi-bold for a subtle emphasis */
+    color: #444; /* Softer color for a more modern feel */
+    line-height: 1.4; /* Comfortable line height */
+    letter-spacing: 0.3px; /* Subtle spacing adjustment */
+}
+
+h5 {
+    font-family: 'Lora', serif; /* Apply Lora font */
+    font-size: 1.5rem; /* Slightly larger for better readability */
+    font-weight: 500; /* Medium weight for a balanced appearance */
+    color: #555; /* Lighter color for a softer look */
+    line-height: 1.5; /* Standard line height */
+    letter-spacing: 0.2px; /* Minimal spacing adjustment */
+}
+
+h6 {
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font */
+    font-size: 1.15rem; /* Slightly larger for visibility */
+    font-weight: 400; /* Regular weight for a clean look */
+    color: #666; /* Light gray for subtle emphasis */
+    line-height: 1.6; /* Relaxed line height for readability */
+    letter-spacing: 0.1px; /* Minor spacing adjustment */
+}
+
+
+
+
+

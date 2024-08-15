@@ -1,0 +1,298 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #0A74DA;
+    --background-color: #F9FAFB;
+    --text-color: #2C3E50;
+    --white-color: #FFFFFF;
+    --accent-color: #FF6F61;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: url('header-background.jpg') no-repeat center center/cover;
+    color: var(--white-color);
+    padding: 60px 0;
+    text-align: center;
+    border-color: cadetblue;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Bulletto Killa', cursive;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shinyText 2s infinite;
+}
+
+@keyframes shinyText {
+    0% { background-position: -500%; }
+    100% { background-position: 500%; }
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic {
+    background: url('F:/project/bio/subash/img/bg.png') no-repeat center/cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-speed), text-shadow var(--transition-speed);
+}
+
+.navbar ul li a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--white-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: #F9FAFB;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: var(--accent-color);
+}
+
+/* Scroll to Top Button */
+#goTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    animation: bounceIn 1s ease-out forwards;
+}
+
+#goTopBtn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Section Styles */
+.about-me, .gallery, .achievements, .contact {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #EFF3F9, #D1E2F1);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-me h2, .gallery h2, .achievements h2, .contact h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-me h2::before, .gallery h2::before, .achievements h2::before, .contact h2::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto;
+}
+
+/* Gallery */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Achievements */
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements ul li {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--text-color);
+    color: var(--white-color);
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-me, .gallery, .achievements, .contact {
+        padding: 20px;
+    }
+
+    .about-me h2, .gallery h2, .achievements h2, .contact h2 {
+        font-size: 1.8em;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN WITH US</title>
+    <meta name="robots" content="noindex">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: "Fjalla One", sans-serif;
+        }
+
+        .contact-us {
+            background: rgba(248, 244, 229, 0.9);
+            padding: 20px 30px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        input,
+        select {
+            width: calc(100% - 10px);
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #ffa580;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: #ffa580;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+        }
+
+        ::selection {
+            background: #ffc8ff;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus {
+            border-bottom: 2px solid #95a4ff;
+            -webkit-text-fill-color: #2A293E;
+            -webkit-box-shadow: 0 0 0px 1000px rgba(248, 244, 229, 0.9) inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-us">
+        <p align="right"><a href="F:\project\index\index.html" class="nav-item nav-link active">Home</a></p>
+        <h1>Join With Us</h1>
+        <form>
+            <input name="name" placeholder="Name" required type="text" />
+            <input name="customerEmail" placeholder="Email" type="email" />
+            <input name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" type="tel" />
+            <label for="state">Country:</label>
+            <select name="state" id="state">
+                <option value="india">India</option>
+                <option value="us">America</option>
+                <option value="nepal" selected>Nepal</option>
+            </select>
+            <label for="hobbies">Hobbies:</label>
+            <select name="hobbies" id="hobbies">
+                <option value="pg">Playing Games</option>
+                <option value="reading">Reading</option>
+                <option value="travelling" selected>Travelling</option>
+                <option value="others">Others</option>
+            </select>
+            <button type="submit">JOIN WITH US</button>
+        </form>
+    </div>
+</body>
+
+</html>
